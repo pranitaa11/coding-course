@@ -1,5 +1,4 @@
 let startBtn = document.getElementById('startBtn');
-let editBtn = document.getElementById('editBtn');
 let resetBtn = document.getElementById('resetBtn');
 let timeEl = document.getElementById('timeEl');
 
