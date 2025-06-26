@@ -1,0 +1,23 @@
+.logo {
+	width: 140px;
+}
+
+body {
+	background-image: url('assets/ripple-1.png'), url('assets/ripple-2.png');
+	background-size: 200px;
+	background-repeat: repeat-x;
+	background-position: top left, bottom left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	text-align: center;
+}
+
+.login {
+	background-color: #0cc0df;
+	color: white;
+	border: none;
+	font-size: 20px;
+	padding: 10px 20px;
+}
