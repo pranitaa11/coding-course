@@ -1,0 +1,35 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background: orange;
+  padding: 40px;
+}
+
+.game-container {
+  background-color: purple;
+  color:white;
+  padding: 60px 20px;
+  border-radius: 20px;
+  font-size: 32px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.word {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 15px 25px;
+  background-color: pink;
+  color: purple;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: blueviolet;
+}
