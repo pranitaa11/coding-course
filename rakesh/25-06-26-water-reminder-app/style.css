@@ -6,12 +6,8 @@
 	box-sizing: border-box;
 }
 
-/* ************************* */
-/* HOME PAGE */
-/* ************************* */
-
-.logo {
-	width: 140px;
+a {
+	text-decoration: none;
 }
 
 body {
@@ -19,12 +15,24 @@ body {
 	background-size: 200px;
 	background-repeat: repeat-x;
 	background-position: top left, bottom left;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	height: 100vh;
 	text-align: center;
 	font-family: 'Knewave', system-ui;
+	padding: 100px 0;
+}
+
+/* ************************* */
+/* HOME PAGE */
+/* ************************* */
+
+.home-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	width: 140px;
 }
 
 button {
@@ -45,5 +53,12 @@ button {
 }
 
 /* ************************* */
-/* DASHBOARD PAGE */
+/* ONBOARDING PAGE */
 /* ************************* */
+input {
+	width: 300px;
+	font-size: 30px;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
