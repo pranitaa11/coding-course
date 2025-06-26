@@ -1,3 +1,15 @@
+/* ************************* */
+/* COMMON */
+/* ************************* */
+
+* {
+	box-sizing: border-box;
+}
+
+/* ************************* */
+/* HOME PAGE */
+/* ************************* */
+
 .logo {
 	width: 140px;
 }
@@ -12,6 +24,11 @@ body {
 	justify-content: center;
 	height: 100vh;
 	text-align: center;
+	font-family: 'Knewave', system-ui;
+}
+
+button {
+	font-family: 'Knewave', system-ui;
 }
 
 .login {
@@ -20,4 +37,13 @@ body {
 	border: none;
 	font-size: 20px;
 	padding: 10px 20px;
+	cursor: pointer;
+	transition: all 0.2s;
 }
+.login:hover {
+	transform: scale(1.05);
+}
+
+/* ************************* */
+/* DASHBOARD PAGE */
+/* ************************* */
