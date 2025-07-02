@@ -1,0 +1,74 @@
+/* ************************* */
+/* COMMON */
+/* ************************* */
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: dashed;
+}
+
+body {
+	background-image: url('assets/ripple-1.png'), url('assets/ripple-2.png');
+	background-size: 200px;
+	background-repeat: repeat-x;
+	background-position: top left, bottom left;
+	height: 100vh;
+	text-align: center;
+	.hanalei-fill-regular {
+  font-family: "Hanalei Fill", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+	padding: 100px 0;
+}
+
+/* ************************* */
+/* HOME PAGE */
+/* ************************* */
+
+.home-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	width: 140px;
+}
+
+button {
+	.hanalei-fill-regular {
+  font-family: "Hanalei Fill", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+}
+
+.login {
+	background-color: #0cc0df;
+	color: white;
+	border: none;
+	font-size: 20px;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+.login:hover {
+	transform: scale(1.05);
+}
+
+/* ************************* */
+/* ONBOARDING PAGE */
+/* ************************* */
+input {
+	width: 300px;
+	font-size: 30px;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
