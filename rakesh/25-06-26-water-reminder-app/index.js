@@ -1,27 +1,3 @@
-// import { auth, provider } from './firebase.js';
-
-// import {
-// 	signInWithPopup,
-// 	GoogleAuthProvider,
-// 	onAuthStateChanged,
-// } from 'https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js';
-
-// const loginBtn = document.getElementById('loginBtn');
-
-// loginBtn.addEventListener('click', function () {
-// 	signInWithPopup(auth, provider)
-// 		.then(result => {
-// 			// The signed-in user info.
-// 			const user = result.user;
-// 			console.log('User: ', user);
-// 		})
-// 		.catch(error => {
-// 			// Handle Errors here.
-// 			const errorMessage = error.message;
-// 			console.log('Error: ', errorMessage);
-// 		});
-// });
-
 import { auth, provider } from './firebase.js';
 import {
 	signInWithPopup,
