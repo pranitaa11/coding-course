@@ -21,6 +21,19 @@ body {
 	padding: 100px 0;
 }
 
+.btn {
+	background-color: #0cc0df;
+	color: white;
+	border: none;
+	font-size: 20px;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+.btn:hover {
+	transform: scale(1.05);
+}
+
 /* ************************* */
 /* HOME PAGE */
 /* ************************* */
@@ -39,19 +52,6 @@ button {
 	font-family: 'Knewave', system-ui;
 }
 
-.login {
-	background-color: #0cc0df;
-	color: white;
-	border: none;
-	font-size: 20px;
-	padding: 10px 20px;
-	cursor: pointer;
-	transition: all 0.2s;
-}
-.login:hover {
-	transform: scale(1.05);
-}
-
 /* ************************* */
 /* ONBOARDING PAGE */
 /* ************************* */
@@ -61,4 +61,40 @@ input {
 	padding: 10px 20px;
 	margin-bottom: 20px;
 	text-align: center;
+}
+
+/* ************************* */
+/* DASHBOARD PAGE */
+/* ************************* */
+.goal {
+	width: 100%;
+	background-color: rgb(216, 216, 216);
+	height: 30px;
+	border-radius: 15px;
+	position: relative;
+}
+
+.progress {
+	position: absolute;
+	height: 100%;
+	width: 10%;
+	background-color: #0cc0df;
+	border-radius: 15px;
+}
+
+.buttons {
+	display: flex;
+	width: 340px;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 40px auto 0;
+}
+
+.buttons .btn {
+	margin: 20px;
+}
+
+.logout {
+	margin-top: 100px;
 }
