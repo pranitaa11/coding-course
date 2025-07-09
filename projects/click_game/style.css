@@ -1,0 +1,25 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+}
+.header {
+	display: flex;
+	background-color: lavender;
+	justify-content: space-between;
+	padding: 15px;
+	height: 68px;
+}
+.header h1 {
+	margin: 0;
+}
+.game {
+	height: calc(100vh - 68px);
+	position: relative;
+}
+.image {
+	font-size: 150px;
+	position: absolute;
+	user-select: none;
+}
