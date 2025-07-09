@@ -17,7 +17,7 @@ const wordDiv = document.querySelector('.word');
 const button = document.querySelector('.btn');
 
 function getRandomWord() {
-  const randomIndex = Math.floor(Math.random() * words.length);
+  const randomIndex = Math.floor(Math.random() * (words.length)/2);
   return words[randomIndex];
 }
 
