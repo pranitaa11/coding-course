@@ -22,4 +22,8 @@ body {
 	font-size: 150px;
 	position: absolute;
 	user-select: none;
+	/* background-color: red; */
+	line-height: 1;
+	border-radius: 100px;
+	cursor: pointer;
 }
