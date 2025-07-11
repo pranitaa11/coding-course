@@ -4,6 +4,8 @@ const scoreEl = document.getElementById('scoreEl');
 
 let score = 0;
 
+let emojiArr = ['🚀', '🕒', '👨‍💻', '🎉', '💣', '🥳', '💻'];
+
 // get the height of the emoji
 const emojiWidth = emojiEl.offsetWidth;
 const emojiHeight = emojiEl.offsetHeight;
@@ -29,11 +31,13 @@ function renderEmoji() {
 	// get random number between 0 and height of the game area
 	const y = Math.floor(Math.random() * h);
 
+	const randomEmojiIndex = Math.floor(Math.random() * 6); // 0 - 6
 	const randomFontSize = Math.random() * 150 + 50; // 50 - 200
 
 	emojiEl.style.left = x + 'px';
 	emojiEl.style.top = y + 'px';
 	emojiEl.style.fontSize = randomFontSize + 'px';
+	emojiEl.innerText = emojiArr[randomEmojiIndex];
 
 	console.log(x, y);
 }

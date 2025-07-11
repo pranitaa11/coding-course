@@ -26,4 +26,5 @@ body {
 	line-height: 1;
 	border-radius: 100px;
 	cursor: pointer;
+	transition: all 0.2s;
 }
