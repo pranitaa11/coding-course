@@ -16,8 +16,8 @@ const h = gameArea.offsetHeight - emojiHeight; // 1398
 
 renderEmoji();
 
-console.log(w, h);
-console.log(emojiWidth, emojiHeight);
+// console.log(w, h);
+// console.log(emojiWidth, emojiHeight);
 
 function gameLogic() {
 	// score = score + 1;
@@ -39,7 +39,7 @@ function renderEmoji() {
 	emojiEl.style.fontSize = randomFontSize + 'px';
 	emojiEl.innerText = emojiArr[randomEmojiIndex];
 
-	console.log(x, y);
+	// console.log(x, y);
 }
 
 setInterval(() => {
