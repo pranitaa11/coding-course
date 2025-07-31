@@ -14,12 +14,12 @@ let todosObj = {
 	b: {
 		name: 'Todo 2',
 		dueDate: '2023-10-02',
-		completed: false,
+		completed: true,
 	},
 	c: {
 		name: 'Todo 3',
 		dueDate: '2023-10-03',
-		completed: false,
+		completed: true,
 	},
 	d: {
 		name: 'Todo 4',
@@ -28,15 +28,20 @@ let todosObj = {
 	},
 };
 
-let itemsHTML = '';
+function renderTodos() {
+	let itemsHTML = '';
 
-Object.entries(todosObj).forEach(([key, value]) => {
-	console.log(`${key} ${value.name}`);
-	itemsHTML += `
+	Object.entries(todosObj).forEach(([key, value]) => {
+		console.log(`${key} ${value.name}`);
+		itemsHTML += `
     <li class="list-group-item d-flex justify-content-between align-items-start">
         <label class="form-check-label stretched-link" for="item_${key}">
-            <input class="form-check-input me-1" type="checkbox" id="item_${key}"> ${value.name}
-            <span class="text-body-secondary fw-normal" style="font-size: 12px;">${value.dueDate}</span>
+            <input class="form-check-input me-1" type="checkbox" id="item_${key}" ${
+			value.completed ? 'checked' : ''
+		}> ${value.name}
+            <span class="text-body-secondary fw-normal" style="font-size: 12px;">${
+							value.dueDate
+						}</span>
         </label>
         <span class="badge text-bg-danger rounded-pill ms-auto d-inline-block" id="${key}">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 16 16">
@@ -45,9 +50,45 @@ Object.entries(todosObj).forEach(([key, value]) => {
         </span>
     </li>
   `;
+	});
+
+	todoListEl.innerHTML = itemsHTML;
+}
+
+renderTodos();
+
+addTodoEl.addEventListener('click', e => {
+	// stop default loading of the page
+	e.preventDefault();
+
+	let todo = todoEl.value;
+	let dueDate = dueDateEl.value;
+
+	let currentDate = new Date();
+	let uniqueTime =
+		currentDate.getHours() + '_' + currentDate.getMinutes() + '_' + currentDate.getSeconds();
+
+	todosObj[uniqueTime] = {
+		name: todo,
+		dueDate: dueDate,
+		completed: false,
+	};
+
+	renderTodos();
+	console.log(todo, dueDate);
 });
 
-todoListEl.innerHTML = itemsHTML;
+// let time = 8;
+
+// if (time < 12) {
+// 	console.log('Good Morning');
+// } else {
+// 	console.log('Good Afternoon');
+// }
+
+// ternary operator (condition ? trueValue : falseValue)
+// console.log(time < 12 ? 'Good Morning' : 'Good Afternoon');
+
 // let todoArr = [
 // 	{
 // 		name: 'Todo 1',
