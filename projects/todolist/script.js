@@ -13,7 +13,7 @@ let todosObj = {
 	b: {
 		name: 'Todo 2',
 		dueDate: '2023-10-02',
-		completed: false,
+		completed: true,
 	},
 	c: {
 		name: 'Todo 3',
@@ -23,7 +23,7 @@ let todosObj = {
 	d: {
 		name: 'Todo 4',
 		dueDate: '2023-10-04',
-		completed: false,
+		completed: true,
 	},
 };
 
