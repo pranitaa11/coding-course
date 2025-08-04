@@ -56,9 +56,10 @@ function renderTodos() {
 renderTodos();
 
 addTodoEl.addEventListener('click', e => {
+
 	e.preventDefault();
 
-	let todo = todoEl.value;
+	let todo = todoEl.value; // then todoEl.value = an empty string
 	let dueDate = dueDateEl.value;
 
 	let currentDate = new Date();
@@ -70,6 +71,10 @@ addTodoEl.addEventListener('click', e => {
 		dueDate: dueDate,
 		completed: false,
 	};
+
+	todoEl.value = ""
+	dueDateEl.value = ""
+
 
 	renderTodos();
 	console.log(todo, dueDate);
