@@ -1,0 +1,7 @@
+.stretched-link::after {
+	position: none;
+}
+
+svg {
+	pointer-events: none;
+}
