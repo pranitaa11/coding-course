@@ -38,9 +38,9 @@ function renderTodos() {
 		itemsHTML += `
     <li class="list-group-item d-flex justify-content-between align-items-start">
         <label class="form-check-label" for="item_${key}">
-            <input class="form-check-input me-1" type="checkbox" id="item_${key}" ${
+            <input class="form-check-input me-1 checkbox-input" type="checkbox" id="item_${key}" ${
 			value.completed ? 'checked' : ''
-		}> ${value.name}
+		}> <span class="text">${value.name}</span>
             <span class="text-body-secondary fw-normal" style="font-size: 12px;">${
 							value.dueDate
 						}</span>
@@ -67,6 +67,20 @@ function renderTodos() {
 			localStorage.setItem('todosInLocalStorage', JSON.stringify(todosObj));
 			renderTodos();
 			// console.log('🚀 ~ deleteEl>>>>', key);
+		});
+	});
+
+	let checkboxEls = document.querySelectorAll('.checkbox-input');
+
+	checkboxEls.forEach(checkboxEl => {
+		checkboxEl.addEventListener('change', e => {
+			let isChecked = e.target.checked;
+
+			let key = e.target.id;
+			key = key.slice(5); // remove 'item_' from the key/id
+
+			todosObj[key].completed = isChecked;
+			localStorage.setItem('todosInLocalStorage', JSON.stringify(todosObj));
 		});
 	});
 }
@@ -137,3 +151,16 @@ addTodoEl.addEventListener('click', e => {
 // console.log(arr1[1]);
 // console.log(arr2[6][1]);
 // console.log(arr2[5].name);
+
+// let a = [10, 20, 30, 40, 50]; // array
+
+// localStorage.setItem('myValue', JSON.stringify(a)); // set item in local storage
+// console.log(JSON.parse(localStorage.getItem('myValue'))); // get item from local storage
+
+// sessionStorage > Cleared when the browser is closed (single tab)
+// Banking,
+// 1% of the time
+
+// localStorage > Cleared when the browser cache is cleared (multiple tabs)
+// Themes settinsgs
+// 99% times
